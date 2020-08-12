@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace VendasConsole
 {
@@ -7,6 +8,7 @@ namespace VendasConsole
         static void Main(string[] args)
         {
             int opcao;
+            Cliente c = new Cliente();
 
             do
             {
@@ -25,6 +27,12 @@ namespace VendasConsole
                 {
                     case 1:
                         Console.WriteLine(" ---- Cadastrar Cliente ---- \n\n");
+                        
+                        Console.WriteLine("Insira o nome do cliente: ");
+                        c.Nome = Console.ReadLine();
+                        Console.WriteLine("Insira o CPF do cliente: ");
+                        c.Cpf = Console.ReadLine();
+                        Console.WriteLine($"Nome: {c.Nome} e CPF: {c.Cpf}");
                         break;
                     case 2:
                         Console.WriteLine(" ---- Listar Clientes ---- \n\n");
