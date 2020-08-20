@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VendasConsole
+namespace VendasConsole.Models
 {
     class Vendedor
     {
