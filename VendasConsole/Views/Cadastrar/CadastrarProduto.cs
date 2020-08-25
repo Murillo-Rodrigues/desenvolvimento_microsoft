@@ -23,11 +23,11 @@ namespace VendasConsole.Views.Cadastrar
             {
                 if (ProdutoDAO.Cadastrar(p))
                 {
-                    Console.WriteLine("\n\nCliente cadastrado com sucesso!\n\n");
+                    Console.WriteLine("\n\nProduto cadastrado com sucesso!\n\n");
                 }
                 else
                 {
-                    Console.WriteLine("\n\nEste cliente já existe!\n\n");
+                    Console.WriteLine("\n\nEste produto já existe!\n\n");
                 }
 
             }
@@ -40,5 +40,4 @@ namespace VendasConsole.Views.Cadastrar
     }
 
 
-}
 }

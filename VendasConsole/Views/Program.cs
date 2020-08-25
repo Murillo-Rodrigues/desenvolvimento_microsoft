@@ -1,4 +1,5 @@
 ﻿using System;
+using VendasConsole.DAL;
 using VendasConsole.Views.Cadastrar;
 using VendasConsole.Views.Listar;
 
@@ -8,6 +9,7 @@ namespace VendasConsole.Views
     {
         static void Main(string[] args)
         {
+            Dados.Inicializar();
             int opcao;
 
             do
@@ -21,6 +23,8 @@ namespace VendasConsole.Views
                     "\n4 - Listar Vendedores" +
                     "\n5 - Cadastrar Produto" +
                     "\n6 - Listar Produtos" +
+                    "\n7 - Cadastrar Venda" +
+                    "\n8 - Listar Venda" +
                     "\n0 - Sair");
 
                 Console.WriteLine("\nDigite a opção desejada: ");
@@ -48,10 +52,10 @@ namespace VendasConsole.Views
                         ListarProdutos.Renderizar();
                         break;
                     case 7:
-
+                        CadastrarVenda.Renderizar();
                         break;
                     case 8:
-
+                        ListarVendas.Renderizar();
                         break;
                     case 9:
 

@@ -1,24 +1,25 @@
 ﻿using System;
+using VendasConsole.DAL;
 
 namespace VendasConsole.Utils
 {
     class Validacao
     {
 
-        private static bool ValidarTamanhoCpf(string cpf) => cpf.Length == 11;
-
-
         public static bool ValidarCpf(string cpf)
         {
             int peso = 10, soma = 0, resto, digito1, digito2;
             cpf = cpf.Replace(".", "").Replace("-", "");
 
-
-            if (!ValidarCpf(cpf))
+            if (cpf.Length != 11)
             {
                 return false;
             }
 
+            //if (!ValidarCpf(cpf))
+            //{
+            //    return false;
+            //}
 
             switch (cpf)
             {
@@ -76,6 +77,15 @@ namespace VendasConsole.Utils
                 return false;
             }
 
+            return true;
+        }
+        public static bool ValidarNome(string nome)
+        {
+            string buscarPorNome = Convert.ToString(ProdutoDAO.BuscarProduto(nome));
+            if (buscarPorNome == nome)
+            {
+                return false;
+            }
             return true;
         }
     }
